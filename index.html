@@ -7,14 +7,46 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Aserturik Portfolio</title>
 </head>
-<body class="body">
+<body>
     <header>
-
-    </header>
-
-    <nav>
         <h1>Alex Hernández</h1>
+        <div>
+            <button id="bdark"><img src="/assets/images/light-mode-icon(1).svg" height="30" width="30"></button>
+        </div>
+    </header>
+    
+    <nav>
         <p>Hola, mi nombre es Alex y soy estudiante de Ingeniería de Sistemas y Computación de la Universidad Pedagógica y Tecnológica de Colombia</p>
     </nav>
+
+    <section>
+        
+    </section>
+
+    <script>
+        const bdark = document.querySelector('#bdark');
+        const body = document.querySelector('body');
+
+        load();
+
+        bdark.addEventListener('click',e =>{
+            body.classList.toggle('lightmode');
+            store(body.classList.contains('lightmode'));
+        });
+
+        function load(){
+            const lightmode = localStorage.getItem('lightmode');
+
+            if(!lightmode){
+                store('false');
+            }else if (lightmode == 'true'){
+                body.classList.add('lightmode');
+            }
+        }
+
+        function store(value){
+            localStorage.setItem('lightmode',value);
+        }
+    </script>
 </body>
 </html>

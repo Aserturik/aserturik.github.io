@@ -1,5 +1,29 @@
-.body{
+body{
     background-color: #22272E;
+    color: aliceblue;
+}
+
+header{
+    background-color: #181b20;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button{
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 10px;
+    align-items: center;
+    border: none;
+    background: transparent;
+    background-color: #23222e;
+}
+
+header button:hover{
+    background-color: aliceblue;
+    color: white;
 }
 
 h1{
@@ -10,4 +34,24 @@ h1,p{
     color: aliceblue;
     padding-left: 30px;
     padding-top: 20px;
+}
+
+body.lightmode{
+    background-color: aliceblue;
+}
+
+.lightmode p{
+    color: #181b20;
+}
+
+.lightmode h1{
+    color: aliceblue;
+}
+
+.lightmode header{
+    background-color: darkgray;
+}
+
+.lightmode header button{
+    background-color: antiquewhite;
 }
