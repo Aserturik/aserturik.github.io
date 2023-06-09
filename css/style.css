@@ -1,6 +1,7 @@
 body{
     background-color: #22272E;
     color: aliceblue;
+    transition: all 0.3s;
 }
 
 header{
